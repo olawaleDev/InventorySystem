@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Inventory</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1" >
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<style type="text/css">
+		input{
+			width: 50px;
+		}
+		#total{
+			width:100px;
+		}
+	</style>
+</head>
+<body>
+       <table class="table table-bordered table-striped" style="width:100%;">
+          <thead>
+            <tr>
+                <th>GOODS</th>
+                <th>PRICE</th>
+                <th>AVAILABLE QUANTITY</th>
+                <th>P QUANTITY</th>
+                <th>AMOUNT (#)</th>
+                <th>PICTURES</th>
+            	
+            </tr>
+          </thead>
+                   <tr>
+                   	 <td>PHONE <img src="iphone-xs.png" width="100" height="100"></td>
+                   	 <td >#70000</td>
+                   	 <td><input type="" value="10" disabled="disabled" id="p1"  name=""></td>
+                   	 <td ><input type="number" name="" id="p2"  onkeyup="p()"></td>
+                   	 <td id="amount1"></td>
+                   	 <td rowspan="5" id="pic"></td>	
+
+                   	  
+                   	 
+
+                   </tr>
+
+                    <tr>
+                    	<td>LAPTOP<img onmouseover ="lapImg(this)" onmouseout="LapImg(this)"  src="laptop.jpeg" width="100" height="60" id="lap"></td>
+                    	<td >#90000</td>
+                    	<td><input type="" name="" id="l1" value="15" disabled="disabled"></td>
+                    	<td><input type="number" name="" id="l2" onkeyup="p()"></td>
+                    	<td id="amount2"></td>
+                   
+                    	
+                    </tr>
+
+                   <tr>
+                   	<td>TV <img src="tv.jpeg" width="100" height="60" onkeypress="T()"></td>
+                   	<td>#100000</td>
+                   	<td><input type="" name="" id="tv1" value="7" disabled="disabled"></td>
+                   	<td><input type="number" name="" id="tv2" onkeyup="p()"></td>
+                   	<td id="amount3"></td>
+                   
+                   
+                   </tr>
+
+                <tr>
+                	<td>SHOE <img src="shoe.jpeg" width="100" height="100"></td>
+                	<td>#25000</td>
+                	<td><input type="" value="5" id="s1" name=""  disabled="disabled"></td>
+                	<td><input type="number" name="" id="s2" onkeyup="p()"></td>
+                	<td id="amount4"></td>
+           
+                	
+                </tr>
+
+                <tr>
+                	<td>HOME THEARTER <img src="homethe.jpeg" id="jj" width="100" height="100"></td>
+                	<td>#35000</td>
+                	<td ><input type="" value="8" disabled="disabled" id="h1" name=""></td>
+                	<td><input type="number" name="" id="h2" onkeyup="p()"></td>
+                	<td id="amount5" ></td>
+                	
+                	
+                </tr>
+
+                <tr>
+               
+                	
+                	<td colspan="3"></td>
+                	<td></td>
+                	<td>TOTAL AMOUNT:<input type="text" name="" id="total"  disabled="disabled" onmouseover="p()"></td>
+                	<td><input type="button"  name="" value="BUY" onclick="pr()"><link rel="stylesheet" type="text/css" href=""></button></td>
+               
+                	
+                	
+
+                </tr>
+
+
+               
+            </table>
+            </body>
+            </html> 
+                       <script type="text/javascript">
+                               
+                                 
+                       function lapImg(l){
+                       	   l.style.width="100";
+                       	   l.style.height="60";
+                          document.getElementById('pic').innerHTML = '<img src="laptop.jpeg">'
+
+                       } 
+                       function LapImg(l){
+                       		l.style.width="60px";
+                            l.style.height="80px";
+  
+                       
+                       	document.getElementById('pic').innerHTML = "";
+                       }                      	 	
+                       	 function p(){
+                       	 	var mul1 = 70000*p2.value;
+                       	 	document.getElementById('amount1').innerHTML= mul1;
+                       	 	document.getElementById('p1').value = 10 - document.getElementById('p2').value;
+                       	 	
+                   
+                       	 
+                       	 
+                            var mul2 = 90000*l2.value;
+                            document.getElementById('amount2').innerHTML = mul2;
+                       	 	
+                       	 	document.getElementById('l1').value = 15 - document.getElementById('l2').value;
+                       				
+                       	 	
+                       	 
+               
+                       	 	
+                       
+                       	 	
+
+                       	 	
+                       	 
+                       	 	var mul3 = 100000*tv2.value;
+                       	 	document.getElementById('amount3').innerHTML = mul3;
+                       	 	document.getElementById('tv1').value = 7 - document.getElementById('tv2').value;
+                       	 
+
+                       	
+                       	 
+
+                       	 	
+                       	
+
+
+                       	 
+                       	 
+                       	 	var mul4 = 25000*s2.value;
+                       	 
+                       	 	document.getElementById('amount4').innerHTML = mul4;
+                       	 	document.getElementById('s1').value = 5 - document.getElementById('s2').value;
+                       	 
+                       	 
+                       	 	var mul5 = 35000*h2.value;
+                       	 
+                       	 	document.getElementById('amount5').innerHTML = mul5;
+                       	 	document.getElementById('h1').value = 8 - document.getElementById('h2').value;
+                          
+                          document.getElementById('total').value =  mul1 + mul2 + mul3 + mul4 + mul5;
+                      }
+                        
+                       	 
+                       	  function pr(){
+                       	 	window.print()
+                       	  }
+                       	 </script>
+
+                 
